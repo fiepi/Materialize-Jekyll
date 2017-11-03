@@ -18,6 +18,16 @@ main {
   flex: 1 0 auto;
 }
 
+header, main, footer {
+  padding-left: 240px;
+}
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+
 ul {
   &:not(.browser-default) {
     padding-left: 0;
@@ -36,7 +46,6 @@ a {
   // Gets rid of tap active state
   -webkit-tap-highlight-color: transparent;
 }
-
 
 // Positioning
 .valign-wrapper {

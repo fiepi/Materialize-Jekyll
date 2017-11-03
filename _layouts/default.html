@@ -2,13 +2,22 @@
 
 {% capture url %}{{ site.url | append: "$" | replace: "/$", "" | replace: "$", "" }}{% endcapture %}
 
-<html lang="ko">
+<html lang="zh_CN">
 <head>
   {% include meta.html %}
   {% include css.html %}
 </head>
 
 <body>
+    <style type="text/css">
+      nav {
+        background-color: #ff5722;
+        box-shadow: none;
+        color: #fff; }
+      nav a { color: #fff; }
+      nav ul a { color: #fff; }
+      nav .brand-logo { color: #fff; }
+    </style>
   <header>
     {% include nav.html %}
   </header>

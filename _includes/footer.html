@@ -1,32 +1,27 @@
-<div class="container">
-  <div class="row">
-    <div class="col l6 s12">
-      <h5 class="white-text logo-font">{{ site.title }}</h5>
-      <p class="grey-text text-lighten-4">
-        {{ site.description }}<br>
-        Designed by <a class="grey-text text-lighten-3" href="https://github.com/Astro36/Materialize-Jekyll">Materialize-Jekyll</a>
-      </p>
-    </div>
-    <div class="col l4 offset-l2 s12">
-      <h5 class="white-text">Links</h5>
-      <ul>
-        {% if site.author.email %}
-        <li><a class="grey-text text-lighten-3" href="mailto:{{ site.author.email }}">Email</a></li>
-        {% endif %}
-        <li><a class="grey-text text-lighten-3" href="https://github.com/{{ site.author.github }}">Github</a></li>
-        {% if site.author.telegram %}
-        <li><a class="grey-text text-lighten-3" href="https://t.me/{{ site.author.telegram }}">Telegram</a></li>
-        {% endif %}
-      </ul>
-    </div>
-  </div>
+<div class="center" style="margin-top: 16px;">
+  <table>
+    <tr>
+      <div align="center">
+        <span style="font-size: 12px; font-weight: 400; min-height: 31px;">
+          <a style="color:white">{{ site.title }} 由 </a>
+          <a style="color:wheat" href="https://jekyllrb.com/">Jekyll </a>
+          <a style="color:white">驱动 | 主题 - </a>
+          <a style="color:wheat" href="https://github.com/Astro36/Materialize-Jekyll">Materialize-Jekyll</a>         
+          <br>
+          <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.zh"><img src="https://licensebuttons.net/l/by-sa/4.0/80x15.png" alt="CC BY-SA"></a>
+          <a style="color:white">若无特殊声明，本站以</a>
+          <a style="color:wheat" rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">知识共享 署名-相同方式共享 4.0 国际 许可协议</a>
+          <a style="color:white">授权这里的文字内容。</a>
+        </span>
+      </div>
+    </tr>
+  </table>
 </div>
-
 <div class="footer-copyright">
   <div class="container">
     © {{ site.time | date: "%Y" }} {{ site.author.name }}. All rights reserved.
     <div class="right">
-      <span class="white-text" style="font-weight: 400; margin-right: 5px;">View on</span><a class="fa fa-github fa-lg white-text" href="https://github.com/{{ site.author.github }}/{{ site.author.github }}.github.io"></a>
+      <span class="white-text" style="font-weight: 400; margin-right: 5px;">View on</span><a class="fa fa-github fa-lg white-text" href="https://github.com/{{ site.author.github }}"></a>
     </div>
   </div>
 </div>

@@ -29,14 +29,9 @@ layout: default
                 <table>
                   <tr>
                     <td>
-                      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img src="https://i.creativecommons.org/l/{{ page.ccl | downcase }}/4.0/88x31.png" alt="크리에이티브 커먼즈 라이선스"></a>
-                    </td>
-                    <td>
                       <span style="font-size: 12px; font-weight: 400; min-height: 31px;">
-                        <span rel="dct:type" xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title">{{ page.title }}</span> by <a rel="cc:attributionURL" xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/{{ site.author.github }}" property="cc:attributionName">{{ site.author.name }}</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/{{ page.ccl | downcase }}/4.0/">Creative Commons Attribution 4.0 International License</a>.<br>
-                        {% if site.author.email %}
-                        Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="mailto:{{ site.author.email }}" rel="cc:morePermissions">{{ site.author.email }}</a>.
-                        {% endif %}
+                        <img src="https://i.creativecommons.org/l/{{ page.ccl | downcase }}/4.0/80x15.png" alt="Creative Commons licenses">
+                        原文使用 <a rel="license" href="http://creativecommons.org/licenses/{{ page.ccl | downcase }}/4.0/deed.zh">知识共享署名 4.0 国际许可协议</a>。<br>
                       </span>
                     </td>
                   </tr>
@@ -67,12 +62,12 @@ layout: default
         {% if page.next %}
         <div class="left">
           <a class="btn-floating waves-effect waves-light white" href="{{ url }}{{ page.next.url }}"><i class="material-icons" style="color: rgba(0,0,0,.87);">arrow_back</i></a>
-          <span style="color: rgba(0,0,0,.87); margin-left: 8px;">Newer</span>
+          <span style="color: rgba(0,0,0,.87); margin-left: 8px;">下一篇</span>
         </div>
         {% endif %}
         {% if page.previous %}
         <div class="right">
-          <span style="color: rgba(0,0,0,.87); margin-right: 8px;">Older</span>
+          <span style="color: rgba(0,0,0,.87); margin-right: 8px;">上一篇</span>
           <a class="btn-floating waves-effect waves-light white" href="{{ url }}{{ page.previous.url }}"><i class="material-icons" style="color: rgba(0,0,0,.87);">arrow_forward</i></a>
         </div>
         {% endif %}
