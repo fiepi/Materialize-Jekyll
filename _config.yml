@@ -44,7 +44,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
-  - kramdown
 
 feed:
   path: atom.xml
@@ -59,7 +58,7 @@ sass:
   style: compressed
 
 color:
-  default: "deep-purple"
-  accent: "blue"
+  theme_color: "#ff5722"
+  sidebar_avatar_bg_color: "deep-orange"
 
 exclude: ['README.md', 'CHANGELOG.md', 'Gemfile.lock', 'Gemfile', 'jekyll-materialize-mod.gemspec', 'LICENSE']
