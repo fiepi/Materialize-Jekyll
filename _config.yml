@@ -33,9 +33,6 @@ author:
   xing: 
   youtube: 
 
-color:
-    user_bg: deep-orange
-
 defaults:
   - scope:
       path: ""
