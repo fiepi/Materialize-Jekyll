@@ -60,5 +60,6 @@ sass:
 color:
   theme_color: "#ff5722"
   sidebar_avatar_bg_color: "deep-orange"
+  nav_bg_color: "#f4511e"
 
 exclude: ['README.md', 'CHANGELOG.md', 'Gemfile.lock', 'Gemfile', 'jekyll-materialize-mod.gemspec', 'LICENSE']
