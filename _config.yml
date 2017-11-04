@@ -1,6 +1,6 @@
 title: FIEPI
 description: Notebook
-url: https://jekyll.fiepi.com
+url: https://blog.fiepi.com
 keywords: ["Programming", "Blog"]
 timezone: Asia/Shanghai
 permalink: :title.html
@@ -16,18 +16,18 @@ author:
   flickr: 
   foursquare: 
   github: fiepi
-  google_analytics: 
+  google_analytics: UA-98638990-2
   google_plus: 
   instagram: 
   lastfm: 
   linkedin: 
-  name: fiepi
+  name: "Mash Kyrielight"
   pinterest: 
   soundcloud: 
   stackoverflow: 
   steam: 
   telegram: fiepi
-  tumblr: 
+  tumblr: https://nekopara.cat
   twitter: 
   weibo: 
   xing: 
