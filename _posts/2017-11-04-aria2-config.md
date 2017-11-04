@@ -61,12 +61,14 @@ server {
 
 测试配置无误后重启 nginx 并生成证书
 
->sudo nginx -t
+```
+sudo nginx -t
 
->sudo systemctl restart nginx.service
+sudo systemctl restart nginx.service
 
->sudo certbot certonly --webroot -w /home/fiepi/web/root -d aria2.fiepi.com
+sudo certbot certonly --webroot -w /home/fiepi/web/root -d aria2.fiepi.com
 
+```
 证书路径：
 
 >/etc/letsencrypt/archive/aria2.fiepi.com/
