@@ -1,9 +1,9 @@
 <div class="navbar-fixed">
 <nav>
     <div class="nav-wrapper">
-      <a class="brand-logo logo-font center" href="{{ site.url }}" style="max-width: 50%; max-height: 56px; overflow:hidden;">{{ site.title }}</a>
+      <a class="brand-logo logo-font center" href="{{ site.url }}" style="max-width: 60%; max-height: 56px; overflow: hidden;">{{ site.title }}</a>
       <a class="button-collapse" data-activates="mobile-nav" href="#"><i class="material-icons">menu</i></a>
-</nav>
+    </nav>
 </div>
 
 <ul class="side-nav" id="mobile-nav">
@@ -16,7 +16,14 @@
        <a href="mailto:{{ site.author.email }}"><span class="white-text email">{{ site.author.email }}</span></a>
        {% endif %}
      </div>
-   </li>
+    </li>
+    <form>
+        <div class="input-field">
+          <input id="search" type="search" required>
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+    </form>
    <li><a class="logo-font" href="{{ site.url }}">主页</a></li>
    <li><a class="logo-font" href="{{ url }}/categories.html">分类</a></li>
    <li><a class="logo-font" href="{{ url }}/tags.html">页面和标签</a></li>
@@ -36,6 +43,13 @@
            {% endif %}
        </div>
     </li>
+    <form>
+      <div class="input-field">
+        <input id="search" type="search" required>
+        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+        <i class="material-icons">close</i>
+      </div>
+  </form>
     <li><a class="logo-font" href="{{ site.url }}">主页</a></li>
     <li><a class="logo-font" href="{{ url }}/categories.html">分类</a></li>
     <li><a class="logo-font" href="{{ url }}/tags.html">页面和标签</a></li>

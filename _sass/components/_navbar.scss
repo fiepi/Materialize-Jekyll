@@ -65,8 +65,15 @@ nav {
     padding: 0;
 
     &.center {
-      left: 50%;
+      left: 42%;
       transform: translateX(-50%);
+    }
+
+    @media only screen and (max-width : 992px) {
+      &.center {
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
 
     @media #{$medium-and-down} {
