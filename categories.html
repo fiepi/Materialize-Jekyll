@@ -14,7 +14,7 @@ permalink: /categories.html
         <article>
           <div class="card">
             <div class="card-content">
-              <span class="card-title">Categories</span>
+              <span class="card-title">分类</span>
               <ul class="collapsible" data-collapsible="expandable">
                 {% for cat in sorted_categories %}
                 <li>
@@ -24,7 +24,7 @@ permalink: /categories.html
                   <ul class="collection">
                     {% for post in site.categories[cat_name] %}
                     <li class="collection-item">
-                      <strong><time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time></strong><br>
+                      <strong><time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time></strong><br>
                       <a href="{{ url }}{{ post.url }}">{{ post.title }}</a>
                     </li>
                     {% endfor %}

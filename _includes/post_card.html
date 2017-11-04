@@ -12,7 +12,7 @@
       {% unless post.image.path %}
       <span class="card-title">{{ post.title }}</span>
       {% endunless %}
-      <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time></p>
+      <p style="font-weight: 600; margin-bottom: 10px;"><time datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time></p>
       <div id="post-content">
         {{ post.content | strip_html | truncate: 100, "…" }}
       </div>
