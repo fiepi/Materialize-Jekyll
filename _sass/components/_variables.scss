@@ -35,7 +35,7 @@
 // 1. Colors
 // ==========================================================================
 
-$primary-color: color("deep-orange", "base") !default;
+$primary-color: color("pink", "base") !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
@@ -43,10 +43,10 @@ $sidenav-bg-top-color: $primary-color;
 
 $license_text_color: #fff;
 
-$secondary-color: color("deep-orange", "base") !default;
+$secondary-color: color("pink", "lighten-1") !default;
 $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
-$link-color: color("orange", "accent-2") !default;
+$link-color: color("pink", "accent-2") !default;
 
 
 // 2. Badges
@@ -316,7 +316,7 @@ $h6-fontsize: 1rem !default;
 // ==========================================================================
 
 $footer-font-color: #fff !default;
-$footer-bg-color: color("deep-orange", "darken-2") !default;
+$footer-bg-color: color("pink", "base") !default;
 $footer-copyright-font-color: rgba(255,255,255,.8) !default;
 $footer-copyright-bg-color: rgba(51,51,51,.08) !default;
 

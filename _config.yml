@@ -1,7 +1,7 @@
-title: FIEPI
-description: Notebook
+title: 玛修·基列莱特
+description: 先輩最低です
 url: https://blog.fiepi.com
-keywords: ["Programming", "Blog"]
+keywords: ["Linux", "Arch Linux", "Android", "Blog"]
 timezone: Asia/Shanghai
 permalink: :title.html
 
@@ -58,8 +58,10 @@ sass:
   style: compressed
 
 color:
-  theme_color: "#ff5722"
-  sidebar_avatar_bg_color: "deep-orange"
-  nav_bg_color: "#f4511e"
+  theme_color: "#e91e63"
+  sidebar_avatar_bg_color: "pink base"
+  nav_bg_color: "#e91e63"
+  post_card_color: "pink darken-1"
+  post_card_color_light: "pink lighten-4"
 
 exclude: ['README.md', 'CHANGELOG.md', 'Gemfile.lock', 'Gemfile', 'jekyll-materialize-mod.gemspec', 'LICENSE']
