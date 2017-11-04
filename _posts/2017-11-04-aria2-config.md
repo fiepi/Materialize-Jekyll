@@ -7,6 +7,10 @@ tags: [archlinux, aria2, https, letsencrypt]
 ccl: by-sa
 ---
 
+Aria2 是一个轻量的多协议、多线程下载器。这里记录一下安装配置过程。
+
+<!-- more -->
+
 # 1. 安装 
 
 >sudo pacman -S aria2 certbot nginx
