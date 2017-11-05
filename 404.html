@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+{% capture url %}{{ site.url | append: "$" | replace: "/$", "" | replace: "$", "" }}{% endcapture %}
+
+<div class="container">
+  <div class="section">
+      <div class="row">
+          <div class="col s12">
+            <div class="card">
+              <div class="card-content">
+                      <span class="card-title">404 Not Found :(</span>
+                      <br>
+                      <p>该页面被吃掉啦！是不是天然呆打错啦 😂</p>
+                    </div>
+                    <div class="card-action">
+                      <p style="text-align: center">
+                        <a class="waves-effect waves-green" href="/">返回首页</a>
+                      </p>
+                    </div>
+            </div>
+          </div>
+        </div>        
+  </div>
+</div>
