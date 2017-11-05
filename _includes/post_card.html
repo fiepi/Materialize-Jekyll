@@ -1,15 +1,13 @@
 <article>
-  <div class="card">
+  <div class="card {{site.color.post_card_color}}">
     {% if post.image.path %}
     <div class="card-image">
       <img class="materialboxed" data-caption="© {{ post.image.copyright }}" src="{{ post.image.path }}">
-      <span class="card-title" style="background-color: rgba(0,0,0,.3); width: 100%;">
+      <span class="card-title" style="background-color: rgba(0,0,0,.3); width: 100%;" onclick="window.location='{{ url }}{{ post.url }}'">
         {{ post.title }}
       </span>
     </div>
     {% endif %}
-  </div>
-  <div class="card {{site.color.post_card_color}}">
     <div class="card-content" style="cursor: pointer;" onclick="window.location='{{ url }}{{ post.url }}'">
       {% unless post.image.path %}
       <span class="card-title white-text">{{ post.title }}</span>
@@ -28,7 +26,6 @@
         </a>
       </div>
       {% endif %}
-    </div>
     </div>
   </div>
 </article>
