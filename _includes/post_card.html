@@ -23,7 +23,9 @@
       {% if site.author.disqus %}
       <div class="right-align" >
         <i class="material-icons" style="color: #9e9e9e;">comment</i>&nbsp;
-        <span class="disqus-comment-count" data-disqus-identifier="{{ post.id }}" data-disqus-url="{{ url }}{{ post.url }}">评论</span>
+        <a href="{{ url }}{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}">
+        <span class="disqus-comment-count" data-disqus-identifier="{{ post.id }}" data-disqus-url="{{ url }}{{ post.url }}" >评论</span>
+        </a>
       </div>
       {% endif %}
     </div>
