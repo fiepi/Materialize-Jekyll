@@ -5,8 +5,8 @@ date: 2017-11-05
 category: archlinux
 tags: [ss-redir, iptables, archlinux, ipset, dnsmasq]
 image:
-    path: https://i.pximg.net/img-original/img/2017/05/26/00/08/46/63069665_p0.png
-    copyright: Atha（アサ）
+    path: https://unsplash.com/photos/-MnS_JCZl-U/download?force=true
+    copyright: まおさめ
 ---
 
 记录 ss-redir 透明代理配置过程。
