@@ -3,7 +3,7 @@ description: 先輩最低です
 url: https://blog.fiepi.com
 keywords: ["Linux", "Arch Linux", "Android", "Blog"]
 timezone: Asia/Shanghai
-permalink: :title.html
+permalink: :categories/:title.html
 
 about: "null"
 
