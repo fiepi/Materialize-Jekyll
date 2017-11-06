@@ -12,13 +12,13 @@ image:
 记录 ss-redir 透明代理配置过程。
 <!-- more -->
 
-## # 相关软件包
+## #  相关软件包
 
 {% highlight bash %}
 sudo pacman -S dnsmasq ipset shadowsocks-libev
 {% endhighlight %}
 
-## # ss-redir 配置
+## #  ss-redir 配置
 
 {% highlight bash %}
 # 创建配置文件
@@ -60,7 +60,7 @@ sudo systemctl start ss-redir.service
 sudo systemctl enable ss-redir.service
 {% endhighlight %}
 
-## # iptables + ipset 实现 chnroute 分流
+## #  iptables + ipset 实现 chnroute 分流
 
 {% highlight bash %}
 # 获取中国 IP
@@ -149,14 +149,14 @@ WantedBy=multi-user.target
 {% endhighlight %}
 
 {% highlight bash %}
-#检查并添加自启动
+# 检查并添加自启动
 sudo systemctl daemon-reload
 sudo systemctl start iptables-proxy.service
 sudo systemctl status iptables-proxy.service
 sudo systemctl enable iptables-proxy.service
 {% endhighlight %}
 
-## # dnsmasq 的配置
+## #  dnsmasq 的配置
 Dnsmasq 提供 DNS 缓存和 DHCP 服务功能，通过缓存 DNS 请求来提高对访问过的网址的连接速度。
 {% highlight bash %}
 sudo vim /etc/dnsmasq.conf

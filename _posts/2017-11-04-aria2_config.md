@@ -13,35 +13,28 @@ Aria2 是一个轻量的多协议、多线程下载器。这里记录一下安�
 
 # 1. 安装 
 
->sudo pacman -S aria2 certbot nginx
+{% highlight bash %}
+sudo pacman -S aria2 certbot nginx
+{% endhighlight %}
 
 # 2. 配置
 
-假设下载服务器域名为：
+假设下载服务器域名为：aria2.fiepi.com
 
-```
-aria2.fiepi.com
-```
+## #  配置临时 web 服务器获取免费 Let's Encrypt 证书
 
-## （1） 配置临时 web 服务器获取免费 Let's Encrypt 证书
-
-添加
-
-```
+{% highlight bash %}
+sudo vim /etc/nginx/nginx.conf
+# 添加到 http 内
 include vhost/*.conf;
-```
+{% endhighlight %}
+{% highlight bash %}
+# 创建 nginx 配置文件
+sudo mkdir /etc/nginx/vhost
+sudo vim /etc/nginx/vhost/aria2.fiepi.com.conf
+{% endhighlight %}
 
-到
-
->/etc/nginx/nginx.conf
-
-创建 nginx 配置文件
-
->sudo mkdir /etc/nginx/vhost
-
->sudo vim /etc/nginx/vhost/aria2.fiepi.com.conf
-
-```
+{% highlight conf %}
 server {
     listen 80;
     server_name aria2.fiepi.com;
@@ -61,43 +54,34 @@ server {
         access_log off;
     }
 }
-```
-
-测试配置无误后重启 nginx 并生成证书
-
-```
+{% endhighlight %}
+{% highlight bash %}
+# 测试配置无误后重启 nginx 并生成证书
 sudo nginx -t
-
 sudo systemctl restart nginx.service
-
 sudo certbot certonly --webroot -w /home/fiepi/web/root -d aria2.fiepi.com
+{% endhighlight %}
+证书路径：/etc/letsencrypt/archive/aria2.fiepi.com
+{% highlight bash %}
+ # 修改权限让 aria2 能够读取
+sudo chown -R fiepi:users /etc/letsencrypt/archive
 
-```
-证书路径：
+#移除临时 web 配置
+sudo mv /etc/nginx/vhost/aria2.fiepi.com.conf /etc/nginx/vhost/aria2.fiepi.com.conf.bak
+sudo systemctl restart nginx.service
+{% endhighlight %}
 
->/etc/letsencrypt/archive/aria2.fiepi.com/
+## #  创建 aria2 配置
 
- 修改权限让 aria2 能够读取
+{% highlight bash %}
+# 随机生成身份认证的 Token：
+openssl rand -hex 15
+# 路径
+mkdir -p ~/.config/aria2
+vim ~/.config/aria2/aria2.conf
+{% endhighlight %}
 
->sudo chown -R fiepi:users /etc/letsencrypt/archive
-
-移除临时 web 配置
-
->sudo mv /etc/nginx/vhost/aria2.fiepi.com.conf /etc/nginx/vhost/aria2.fiepi.com.conf.bak
-
->sudo systemctl restart nginx.service
-
-## （2）创建 aria2 配置
-
->mkdir -p ~/.config/aria2
-
->vim ~/.config/aria2/aria2.conf
-
-随机生成身份认证的 Token：
-
->openssl rand -hex 15
-
-```
+{% highlight conf %}
 ## 下载路径
 dir=~/Downloads/aria2
 ## 生成随机 Token: openssl rand -hex 15
@@ -149,13 +133,14 @@ disk-cache=0
 #max-tries=0
 ## user agent，此处所填值用于伪装成百度云网盘客户端
 user-agent=netdisk;4.4.0.6;PC;PC-Windows;6.2.9200 WindowsBaiduYunGuanJia
-```
+{% endhighlight %}
 
-## （3）创建 systemd 守护进程
+## #  创建 systemd 守护进程
 
->sudo vim /etc/systemd/user/aria2.service
-
-```
+{% highlight bash %}
+sudo vim /etc/systemd/user/aria2.service
+{% endhighlight %}
+{% highlight conf %}
 [Unit]
 Description=Aria2 Service
 After=network.target
@@ -167,32 +152,27 @@ ExecStart=/usr/bin/aria2c --daemon --enable-rpc --rpc-listen-all --rpc-allow-ori
 
 [Install]
 WantedBy=default.target
-```
-启动
 
-```
+{% endhighlight %}
+
+{% highlight bash %}
+# 启动
 systemctl --user start aria2.service
-
 systemctl --user enable aria2.service
-```
+{% endhighlight %}
 
 过去用户进程在用户登出时会被杀死，现在 Arch 已经修改了默认编译参数，所以不需要额外的设置。详见  [Arch Wiki Systemd/User](https://wiki.archlinux.org/index.php/Systemd/User) 的 [Kill user processes on logout](https://wiki.archlinux.org/index.php/Systemd/User#Kill_user_processes_on_logout) 部分。
 
-## （4）防火墙配置
-
-打开 6800 端口
-
->sudo vim /etc/iptables/iptables.rules
-
-添加
-
-```
+## #  防火墙配置
+{% highlight bash %}
+# 打开 6800 端口
+sudo vim /etc/iptables/iptables.rules
+# 添加
 -A INPUT -p tcp -m tcp --dport 6800 -j ACCEPT
-```
 
-使之生效
-
->sudo iptables-restore < /etc/iptables/iptables.rules
+#生效
+sudo iptables-restore < /etc/iptables/iptables.rules
+{% endhighlight %}
 
 最后打开 Yaaw（[yaaw.fiepi.com](https://yaaw.fiepi.com)） 前端，填入配置：
 
