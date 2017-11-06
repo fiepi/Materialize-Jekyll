@@ -1,7 +1,7 @@
 title: 玛修·基列莱特
 description: 先輩最低です
 url: https://blog.fiepi.com
-keywords: ["Linux", "Arch Linux", "Android", "Blog"]
+keywords: ["Linux", "Arch Linux", "Android", "Blog", "Shadowsocks"]
 timezone: Asia/Shanghai
 permalink: :categories/:title.html
 
@@ -11,7 +11,7 @@ author:
   codepen: 
   disqus: fiepi
   dribbble: 
-  email: fiepi.dev@gamil.com
+  email: im@fiepi.com
   facebook: 
   flickr: 
   foursquare: 
