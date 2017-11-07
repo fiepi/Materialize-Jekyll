@@ -244,11 +244,12 @@ $element-bottom-margin: ($gutter-width*2)/3 !default;
 
 $navbar-height: 56px !default;
 $navbar-line-height: $navbar-height !default;
-$navbar-height-mobile: 50px !default;
+$navbar-height-mobile: 56px !default;
 $navbar-line-height-mobile: $navbar-height-mobile !default;
 $navbar-font-size: 1rem !default;
-$navbar-font-color: #fff !default;
-$navbar-brand-font-size: 1.5rem !default;
+$navbar-font-color: #ffffff !default;
+$navbar-brand-font-size: 1.6rem !default;
+$navbar-bg-color: $primary-color;
 
 // 15. Side Navigation
 // ==========================================================================
@@ -256,8 +257,8 @@ $navbar-brand-font-size: 1.5rem !default;
 $sidenav-font-size: 14px !default;
 $sidenav-font-color: rgba(0,0,0,.87) !default;
 $sidenav-bg-color: #fff !default;
-$sidenav-padding: 10px !default;
-$sidenav-item-height: 48px !default;
+$sidenav-padding: 12px !default;
+$sidenav-item-height: 56px !default;
 $sidenav-line-height: $sidenav-item-height !default;
 
 

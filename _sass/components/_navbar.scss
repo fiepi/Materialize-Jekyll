@@ -15,7 +15,7 @@ nav {
 
   color: $navbar-font-color;
   @extend .z-depth-2;
-  background-color: #fff;
+  background-color: $navbar-bg-color;
   width: 100%;
   height: $navbar-height-mobile;
   line-height: $navbar-line-height-mobile;
@@ -124,7 +124,7 @@ nav {
       padding: 0;
 
       &.active {
-        background-color: rgba(0,0,0,.1);
+        background-color: #ffffff;
       }
     }
     a {
@@ -147,7 +147,7 @@ nav {
       }
 
       &:hover {
-        background-color: rgba(0,0,0,.1);
+        background-color: #ffffff;
       }
     }
 
@@ -183,7 +183,7 @@ nav {
       left: 0;
 
       i {
-        color: rgba(0,0,0,.87);
+        color: #ffffff;
         transition: color .3s;
       }
       &.active i { color: $navbar-font-color; }
